@@ -5,14 +5,9 @@ const robots = {
 
 async function Start(){
     const content ={};
-    content.searchLang = askAndReturnLang();
+    content.lang = askAndReturnLang();
     content.searchTerm = askAndReturnSearchTerm();
     content.prefix = askAndReturnPrefix();
-    content.searchInput = {
-        "articleName": content.searchTerm,
-        "lang": content.searchLang
-      };
-
 
     await robots.text(content);
 
