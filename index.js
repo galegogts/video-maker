@@ -5,6 +5,7 @@ const robots = {
 
 async function Start(){
     const content ={};
+    content.maximumSentences = 7;
     content.lang = askAndReturnLang();
     content.searchTerm = askAndReturnSearchTerm();
     content.prefix = askAndReturnPrefix();
@@ -28,6 +29,6 @@ async function Start(){
 
         return selectedLangText;
     }
-    console.log(content)
+    console.log(JSON.stringify(content));
 }
 Start();
