@@ -5,14 +5,10 @@ const robots = {
 
 async function Start(){
     const content ={};
-    content.searchLang = askAndReturnLang();
+    content.maximumSentences = 7;
+    content.lang = askAndReturnLang();
     content.searchTerm = askAndReturnSearchTerm();
     content.prefix = askAndReturnPrefix();
-    content.searchInput = {
-        "articleName": content.searchTerm,
-        "lang": content.searchLang
-      };
-
 
     await robots.text(content);
 
@@ -33,6 +29,6 @@ async function Start(){
 
         return selectedLangText;
     }
-    console.log(content)
+    console.log(JSON.stringify(content));
 }
 Start();
