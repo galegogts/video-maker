@@ -108,3 +108,4 @@ credentials/*.json
 
 # content
 content.json
+content/*
